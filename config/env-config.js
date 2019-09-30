@@ -1,7 +1,7 @@
 const envConfig = {
     development: {
         dbUrl: 'mongodb://localhost:27017/application_db',
-        port: 3000,
+        port: 8000,
         rootPath: '../',
     },
     production: {

@@ -2,12 +2,15 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const cors = require('cors');
+const multer = require('multer');
+
 
 module.exports = (app, rootPath) => {
     app.use(logger('dev'));
     app.use(cors())
     app.use(express.json());
     app.use(express.urlencoded({ extended: false }));
+    app.use(multer({dest: '../public/uploads'}).none())
     // app.use((req, res, next) => {
     //     next(createError(404));
     // });

@@ -9,9 +9,8 @@ router
             .then(a => res.json(a))
             .catch(e => console.log(e));
     })
-    .post('/', (req, res, next) => {
+    .post('/',(req, res) => {
         const requestBody = req.body;
-    
         getCurrentSmallestLoanAmount()
             .then(smallestLoanAmount => {
                 if (smallestLoanAmount > requestBody.loanAmount) {

@@ -6,6 +6,7 @@ const applicationSchema = new Schema({
     email: { type: String, required:true },
     phone: { type: String, required:true },
     loanAmount: { type: Number, required: true },
+    interestRate: Number,
 });
 
 module.exports = model('Application', applicationSchema);
